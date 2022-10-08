@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:dev": "supervisor server.js",
+    "start": "supervisor server.js",
     "start:prod": "NODE_ENV=production supervisor server.js"
   },
   "keywords": [],
@@ -14,6 +14,7 @@
   "dependencies": {
     "dotenv": "^16.0.2",
     "express": "^4.18.1",
+    "mongoose": "^5.13.15",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.19",
     "supervisor": "^0.12.0"
