@@ -38,6 +38,22 @@ const tourSchema = new mongoose.Schema({
 // ini merupakan contoh model
 const Tour = mongoose.model('Tour', tourSchema);
 
+// membuat document
+const testTour = new Tour({
+  name: 'The Park Camper',
+  price: 997,
+});
+
+// save document
+testTour
+  .save()
+  .then((doc) => {
+    console.log(doc);
+  })
+  .catch((err) => {
+    console.log('ERROR :', err);
+  });
+
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`App running on port ${port}`);
